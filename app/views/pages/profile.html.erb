@@ -1,0 +1,7 @@
+<h1>Mes réservations</h1>
+<% @bookings.each do |booking| %>
+<%= booking.car.brand %>
+<%= booking.start_date %> <%= booking.end_date %>
+<%= link_to "Modifier votre réservation", edit_car_booking_path(booking.car, booking) %>
+
+<% end %>
