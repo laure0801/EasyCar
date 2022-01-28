@@ -8,13 +8,10 @@
 
 require "open-uri"
 Car.destroy_all
-User.destroy_all
 
 puts "bonjour"
 file9 = File.open("app/assets/images/florine_avatar.jpg")
 
-user = User.create(first_name: "Florine", last_name: "Ponsard", email:"floflodu13@gmail.com", password: 123456)
-user.photo.attach(io: file9, filename: 'florine_avatar.jpg', content_type: 'image/jpg')
 puts "creating"
 
 file = URI.open('https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y2FyfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60')
