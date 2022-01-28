@@ -1,8 +1,11 @@
+<div class= "booking-container">
+  <div class="booking-container-infos">
 <h1><%= @booking.car.brand %> <%= @booking.car.model %> </h1>
   <%= cl_image_tag @booking.car.photo.key, height: 300, width: 400, crop: :fill %>
  <p> <%= @booking.car.description %></p>
   <p> Date de début : <%= @booking.start_date %></p>
    <p> Date de fin : <%= @booking.end_date %></p>
-
- <%= link_to "Annuler votre réservation", car_booking_path(@booking.car), method: :delete, data: { confirm: "Annuler cette réservation ?" } %>
-<%= link_to "Modifier votre réservation", edit_car_booking_path(@booking.car, @booking) %>
+ <%= link_to "Annuler votre réservation", car_booking_path(@booking.car), method: :delete, data: { confirm: "Annuler cette réservation ?" }, class: "btn-booking"%>
+<%= link_to "Modifier votre réservation", edit_car_booking_path(@booking.car, @booking), class: "btn-booking" %>
+    </div>
+</div>

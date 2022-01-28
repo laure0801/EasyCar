@@ -1,6 +1,5 @@
 class BookingsController < ApplicationController
 
-
   def show
     @booking = Booking.find(params[:id])
     @car = Car.find(params[:car_id])
@@ -17,7 +16,7 @@ class BookingsController < ApplicationController
     @booking.car = @car
     @booking.user = current_user
     if @booking.save
-      redirect_to root_path
+      redirect_to car_booking_path(@booking.car, @booking)
     else
       render :new
     end

@@ -1,4 +1,17 @@
-<h1><%= @car.brand %> <%= @car.model %> </h1>
+<div class="card-trip">
+    <div class="whole-card">
+          <div class="card-trip-infos">
+
+<h2 class="card-trip-pricing"><%= @car.brand %> <%= @car.model %> </h2>
+ </div>
+
   <%= cl_image_tag @car.photo.key, height: 300, width: 400, crop: :fill %>
  <p> <%= @car.description %></p>
- <%= link_to "Réserver cette voiture", new_car_booking_path(@car) %>
+ <%= link_to "Réserver cette voiture", new_car_booking_path(@car), class: "btn btn-primary" %>
+ </div>
+</div>
+
+<div class="img-voiture">
+ <%= image_tag url = "https://img1.picmix.com/output/stamp/normal/6/6/9/3/1563966_38f50.gif"%>
+</div>
+</div>
